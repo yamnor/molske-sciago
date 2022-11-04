@@ -305,7 +305,7 @@ def main():
     key = "webrtc",
     media_stream_constraints = {"video": True, "audio": False},
     video_processor_factory = VideoProcessor,
-    # rtc_configuration = {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+    rtc_configuration = {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
 
   with st.sidebar:
