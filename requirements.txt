@@ -21,7 +21,7 @@ thop>=0.1.1
 
 rdkit
 py3Dmol
-stmol==0.0.7
+stmol
 
-streamlit==1.11.1
+streamlit
 streamlit-webrtc
