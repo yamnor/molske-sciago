@@ -1,10 +1,10 @@
 import threading
 
-import os
-os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+#import os
+#os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
-#import streamlit as st
-#from streamlit_webrtc import VideoProcessorBase, webrtc_streamer
+import streamlit as st
+from streamlit_webrtc import VideoProcessorBase, webrtc_streamer
 
 import av
 import cv2
@@ -390,7 +390,7 @@ def main():
         [WebSite](https://yamlab.net).
       """)
     
-    st.caption("[molske science agora ver.](https://github.com/yamnor/molske)")
+    st.caption("[molske science agora ver.](https://github.com/yamnor/molske-sciago)")
 
 if __name__ == "__main__":
     main()
