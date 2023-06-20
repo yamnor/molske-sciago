@@ -1,7 +1,9 @@
 import threading
 
-#import os
+import os
 #os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+
+from twilio.rest import Client
 
 import streamlit as st
 from streamlit_webrtc import VideoProcessorBase, webrtc_streamer
@@ -301,12 +303,17 @@ def main():
 
   # st.title("molske ✍️")
 
+  account_sid = os.environ['TWILIO_ACCOUNT_SID']
+  auth_token = os.environ['TWILIO_AUTH_TOKEN']
+  client = Client(account_sid, auth_token)
+  token = client.tokens.create()
+
   ctx = webrtc_streamer(
     key = "webrtc",
     media_stream_constraints = {"video": True, "audio": False},
     video_processor_factory = VideoProcessor,
-    rtc_configuration = {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
-    )
+    rtc_configuration = {"iceServers": token.ice_servers}
+  )
 
   with st.sidebar:
 

@@ -10,6 +10,8 @@ torchvision>=0.8.1
 tqdm>=4.64.0
 protobuf<=3.20.1
 
+ultralytics
+
 tensorboard>=2.4.1
 
 pandas>=1.1.4
@@ -20,8 +22,10 @@ psutil
 thop>=0.1.1
 
 rdkit
-py3Dmol
-stmol
+py3Dmol==2.0.0.post2
+stmol==0.0.9
 
-streamlit
-streamlit-webrtc
+twilio
+
+streamlit>=1.23.1
+streamlit-webrtc>=0.45.1
